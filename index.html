@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selamat Ulang Tahun, Raihan!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Selamat Ulang Tahun!</h1>
+      <h2 class="nama-raihan">Raihan</h2>
+    </div>
+    <div class="photo-gallery">
+      <div class="photo-item"><img src="foto1.jpg" alt="Foto 1" /></div>
+      <div class="photo-item"><img src="foto2.jpg" alt="Foto 2" /></div>
+      <div class="photo-item"><img src="foto3.jpg" alt="Foto 3" /></div>
+    </div>
+    <div class="message">
+      <p>
+        Di hari ulang tahunmu ini, semoga semua yang terbaik selalu
+        menyertaimu.<br />
+        Terima kasih sudah menjadi teman yang luar biasa, Raihan!
+      </p>
+    </div>
+    <div class="music-controls">
+      <button onclick="putarMusik()">Putar Musik</button>
+      <audio id="laguUltah" controls loop>
+        <source src="lagu.mp3" type="audio/mpeg" />
+        Maaf, browser Anda tidak mendukung pemutaran audio.
+      </audio>
+    </div>
+    <script>
+      function putarMusik() {
+        var lagu = document.getElementById("laguUltah");
+        lagu.play();
+      }
+    </script>
+  </body>
+</html>
