@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selamat Ulang Tahun, Raihan!</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Align items from the top / min-height: 100vh; background-color: #f8f0e3; / Soft yellow background */
+        overflow-x: hidden;
+      }
+      .header {
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 3.5em;
+        color: #d63384; /* Vibrant pink */
+        animation: pulse 1.5s infinite;
+        margin-bottom: 5px;
+      }
+
+      .nama-raihan {
+        font-size: 2.5em;
+        color: #1864ab; /* Deep blue */
+        margin-top: 0;
+      }
+
+      .photo-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      .photo-item {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1s ease-out;
+      }
+
+      .photo-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .message {
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      .message p {
+        font-size: 1.4em;
+        color: #343a40; /* Dark gray */
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .music-controls {
+        margin-top: 20px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .music-controls button {
+        padding: 10px 20px;
+        font-size: 1em;
+        border: none;
+        border-radius: 50px;
+        background-color: #a8dadc; /* Light teal */
+        color: #1d3557; /* Dark blue */
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .music-controls button:hover {
+        background-color: #457b9d; /* Medium blue */
+        color: white;
+      }
+
+      audio {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Selamat Ulang Tahun!</h1>
+      <h2 class="nama-raihan">Raihan</h2>
+    </div>
+    <div class="photo-gallery">
+      <div class="photo-item">
+        <img src="foto1.jpg" alt="Foto 1" />
+      </div>
+      <div class="photo-item">
+        <img src="foto2.jpg" alt="Foto 2" />
+      </div>
+      <div class="photo-item">
+        <img src="foto3.jpg" alt="Foto 3" />
+      </div>
+    </div>
+
+    <div class="message">
+      <p>
+        Di hari ulang tahunmu ini, semoga semua yang terbaik selalu menyertaimu.
+        <br />
+        Terima kasih sudah menjadi teman yang luar biasa, Raihan!
+      </p>
+    </div>
+
+    <div class="music-controls">
+      <button onclick="putarMusik()">Putar Musik</button>
+      <audio id="laguUltah" controls loop>
+        <source src="LINK_LAGU_MP3_PILIHANMU_DI_SINI" type="audio/mpeg" />
+        Maaf, browser Anda tidak mendukung pemutaran audio.
+      </audio>
+    </div>
+
+    <script>
+      function putarMusik() {
+        var lagu = document.getElementById("laguUltah");
+        lagu.play();
+      }
+    </script>
+  </body>
+</html>
